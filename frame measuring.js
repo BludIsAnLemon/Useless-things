@@ -4,10 +4,8 @@
   let im = false;
   let f = 0
   
-  while (true) {
-     if (im) {
+  while (im) {
         f += 1
-     }
   }
 
    class fm {
