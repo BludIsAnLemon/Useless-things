@@ -33,7 +33,9 @@ function colorgen() {
    return generated
 }
 
-class HelloWorld {
+const extID = gen(5)
+
+class extID {
   getInfo() {
     return {
       id: 'cool',
@@ -67,4 +69,4 @@ class HelloWorld {
   }
 }
 
-Scratch.extensions.register(new HelloWorld());
+Scratch.extensions.register(new extID());
