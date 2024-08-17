@@ -9,11 +9,25 @@ function gen(n) {
    return generated;
 }
 
+function colorgen() {
+   const hexASCII = "abcdef0123456789";
+   const length = hexASCII.length;
+   let generated = "#";
+   for(let i = 1; i < 6; i++) {
+      const ranASCII = Math.floor(Math.random() * length)
+      generated += Scratch.Cast.toString(hexASCII.charAt(ranASCII))
+   }
+   return generated
+}
+
 class HelloWorld {
   getInfo() {
     return {
       id: 'cool',
       name: gen(5),
+      color1: colorgen(),
+      color2: colorgen(),
+      color3: colorgen(),
       blocks: [
         {
           opcode: 'hello',
