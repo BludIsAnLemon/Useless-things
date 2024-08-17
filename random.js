@@ -46,7 +46,7 @@ class HelloWorld {
           text: gen(10)
         },
         {
-          code: 'btn',
+          func: 'btn',
           blockType: Scratch.BlockType.BUTTON,
           text: gen(5)
         }
