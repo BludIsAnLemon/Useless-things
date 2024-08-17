@@ -13,7 +13,7 @@ function colorgen() {
    const hexASCII = "abcdef0123456789";
    const length = hexASCII.length;
    let generated = "#";
-   for(let i = 1; i < 6; i++) {
+   for(let i = 0; i < 6; i++) {
       const ranASCII = Math.floor(Math.random() * length)
       generated += Scratch.Cast.toString(hexASCII.charAt(ranASCII))
    }
