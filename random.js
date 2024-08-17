@@ -10,7 +10,7 @@ function gen(n) {
 }
 
 function randomBlockType() {
-   const random = Math.floor(Math.random * 3)
+   const random = Math.floor(Math.random() * 3)
    if (random == 0) {
       return Scratch.BlockType.COMMAND
    }
