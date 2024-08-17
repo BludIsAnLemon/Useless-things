@@ -1,3 +1,16 @@
+function randomBlockType() {
+   const random = Math.floor(Math.random() * 3)
+   if (random == 0) {
+      return Scratch.BlockType.COMMAND
+   }
+   else if (random == 1) {
+      return Scratch.BlockType.REPORTER
+   }
+   else {
+      return Scratch.BlockType.BOOLEAN
+   }
+}
+
 (function(Scratch) {
   'use strict';
 
@@ -11,7 +24,7 @@
          blocks: [
            {
              opcode: 'woah',
-             blockType: Scratch.BlockType.COMMAND,
+             blockType: randomBlockType(),
              text: 'woah!'
            },
            {
