@@ -39,7 +39,8 @@ function randomBlockType() {
        return 0;
      }
      refresh() {
-       vm.runtime.extensionManager.refreshBlocks();
+       vm.extensionManager.removeExtension(woah);
+       vm.extensionManager.loadExtension("https://bludisanlemon.github.io/Useless-things/woah.js")
      }
    }
 
