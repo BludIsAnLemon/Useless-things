@@ -9,6 +9,7 @@
        return {
          id: 'cc',
          name: 'Color Change',
+         color1: color,
          blocks: [
            {
              opcode: 'change',
