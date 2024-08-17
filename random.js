@@ -27,7 +27,6 @@ class HelloWorld {
       name: gen(5),
       color1: colorgen(),
       color2: colorgen(),
-      color3: colorgen(),
       blocks: [
         {
           opcode: 'hello',
