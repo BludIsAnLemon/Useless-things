@@ -1,3 +1,4 @@
+// this doesn't work anymore
 function randomBlockType() {
    const random = Math.floor(Math.random() * 3)
    if (random == 0) {
