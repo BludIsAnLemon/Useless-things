@@ -49,7 +49,7 @@ class HelloWorld {
           func: 'btn',
           blockType: Scratch.BlockType.BUTTON,
           text: gen(5)
-        }
+        },
         {
           opcode: 'hello',
           blockType: randomBlockType(),
