@@ -2,7 +2,7 @@ function gen(n) {
    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|\;:,.<>?`~";
    let generated = "";
    for(let i = 0; i < n; i++) {
-      let rl = math.floor(math.random() * letters.length)
+      let rl = Math.floor(Math.random() * letters.length)
       let r = letters.charAt(rl)
       generated += Scratch.Cast.toString(r)
    }
