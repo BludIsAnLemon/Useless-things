@@ -64,7 +64,7 @@ class extID {
     return gen(5);
   }
   btn() {
-    window.alert(gen(5));
+    let e = window.prompt(gen(5));
   }
 }
 
