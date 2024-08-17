@@ -33,8 +33,6 @@ function colorgen() {
    return generated
 }
 
-const extID = gen(5)
-
 class extID {
   getInfo() {
     return {
@@ -42,6 +40,7 @@ class extID {
       name: gen(5),
       color1: colorgen(),
       color2: colorgen(),
+      color3: colorgen(),
       blocks: [
         {
           blockType: Scratch.BlockType.LABEL,
