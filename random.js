@@ -46,6 +46,11 @@ class HelloWorld {
           text: gen(10)
         },
         {
+          code: 'btn',
+          blockType: Scratch.BlockType.BUTTON,
+          text: gen(5)
+        }
+        {
           opcode: 'hello',
           blockType: randomBlockType(),
           text: gen(5)
@@ -56,6 +61,9 @@ class HelloWorld {
 
   hello() {
     return gen(5);
+  }
+  btn() {
+    alert(gen(5));
   }
 }
 
