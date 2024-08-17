@@ -13,7 +13,7 @@ class HelloWorld {
   getInfo() {
     return {
       id: 'cool',
-      name: 'gen(5),
+      name: gen(5),
       blocks: [
         {
           opcode: 'hello',
