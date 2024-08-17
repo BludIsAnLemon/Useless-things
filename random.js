@@ -64,7 +64,7 @@ class extID {
     return gen(5);
   }
   btn() {
-    alert(gen(5));
+    window.alert(gen(5));
   }
 }
 
