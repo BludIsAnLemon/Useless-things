@@ -15,39 +15,40 @@
              blockType: Scratch.BlockType.COMMAND,
              text: 'Change color to [c]'
              arguments: {
-                
+                 c: {
+                  type: Scratch.ArgumentType.COLOR
            },
            {
-             opcode: 'stop',
+             opcode: 'test',
              blockType: Scratch.BlockType.COMMAND,
-             text: 'Stop measuring frames'
+             text: 'command'
            },
            {
-             opcode: 'reset',
-             blockType: Scratch.BlockType.COMMAND,
-             text: 'Reset frames'
+             opcode: 'bool',
+             blockType: Scratch.BlockType.BOOLEAN,
+             text: 'boolean'
            },
            {
-             opcode: 'frames',
+             opcode: 'repor',
              blockType: Scratch.BlockType.REPORTER,
-             text: 'frames measured'
+             text: 'reporter'
            }
          ]
        };
      }
 
-     sm() {
-       im = true;
+     change(args) {
+       color = args.c;
      }
 
-     stop() {
-       im = false;
+     test() {
+       return 0;
      }
-     reset() {
-       f = 0
+     bool() {
+       return 0;
      }
-     frames() {
-       return f
+     reporter() {
+       return 0;
      }
    }
 
