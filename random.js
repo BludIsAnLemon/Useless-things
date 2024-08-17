@@ -9,6 +9,19 @@ function gen(n) {
    return generated;
 }
 
+function randomBlockType() {
+   const random = Math.floor(Math.random * 3)
+   if (random == 0) {
+      return Scratch.BlockType.COMMAND
+   }
+   elseif (random == 1) {
+      return Scratch.BlockType.REPORTER
+   }
+   else {
+      return Scratch.BlockType.BOOLEAN
+   }
+}
+
 function colorgen() {
    const hexASCII = "abcdef0123456789";
    const length = hexASCII.length;
@@ -30,7 +43,7 @@ class HelloWorld {
       blocks: [
         {
           opcode: 'hello',
-          blockType: Scratch.BlockType.REPORTER,
+          blockType: randomBlockType(),
           text: gen(5)
         }
       ]
