@@ -53,4 +53,4 @@
      }
    }
 
-Scratch.extensions.register(new fm());})(Scratch);
+Scratch.extensions.register(new cc());})(Scratch);
