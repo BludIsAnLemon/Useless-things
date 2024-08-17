@@ -14,7 +14,7 @@ function randomBlockType() {
    if (random == 0) {
       return Scratch.BlockType.COMMAND
    }
-   elseif (random == 1) {
+   else if (random == 1) {
       return Scratch.BlockType.REPORTER
    }
    else {
