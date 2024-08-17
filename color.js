@@ -14,7 +14,7 @@
            {
              opcode: 'change',
              blockType: Scratch.BlockType.COMMAND,
-             text: 'Change color to [c]'
+             text: 'Change color to [c]',
              arguments: {
                  c: {
                   type: Scratch.ArgumentType.COLOR
@@ -32,7 +32,7 @@
              text: 'boolean'
            },
            {
-             opcode: 'repor',
+             opcode: 'reporter',
              blockType: Scratch.BlockType.REPORTER,
              text: 'reporter'
            }
