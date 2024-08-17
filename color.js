@@ -2,6 +2,7 @@
   'use strict';
   
   let color = "#666374"
+  const vm = Scratch.vm
   
 
    class cc {
@@ -42,6 +43,7 @@
 
      change(args) {
        color = args.c;
+       vm.extensionManager.refreshBlocks();
      }
 
      test() {
