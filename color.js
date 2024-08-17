@@ -1,7 +1,7 @@
 (function(Scratch) {
   'use strict';
   
-  let color = #666374
+  let color = "#666374"
   
 
    class cc {
@@ -18,6 +18,8 @@
              arguments: {
                  c: {
                   type: Scratch.ArgumentType.COLOR
+                 }
+             }
            },
            {
              opcode: 'test',
