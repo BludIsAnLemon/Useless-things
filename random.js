@@ -42,6 +42,10 @@ class HelloWorld {
       color2: colorgen(),
       blocks: [
         {
+          blockType: Scratch.BlockType.LABEL,
+          text: gen(10)
+        },
+        {
           opcode: 'hello',
           blockType: randomBlockType(),
           text: gen(5)
