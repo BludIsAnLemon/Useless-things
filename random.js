@@ -3,7 +3,7 @@ function gen(n) {
    let generated = "";
    for(let i = 0; i < n; i++) {
       let rl = math.floot(math.random() * letters.length)
-      let r = letters.charAt(rl}
+      let r = letters.charAt(rl)
       generated += Scratch.Cast.toString(r)
    }
    return generated;
@@ -12,8 +12,8 @@ function gen(n) {
 class HelloWorld {
   getInfo() {
     return {
-      id: gen(5),
-      name: 'It works!',
+      id: 'cool',
+      name: 'gen(5),
       blocks: [
         {
           opcode: 'hello',
