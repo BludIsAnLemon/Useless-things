@@ -1,3 +1,5 @@
+const TextLength = 10
+
 function gen(n) {
    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|\;:,.<>?`~¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽž";
    let generated = "";
@@ -37,34 +39,34 @@ class extID {
   getInfo() {
     return {
       id: 'cool',
-      name: gen(5),
+      name: gen(TextLength),
       color1: colorgen(),
       color2: colorgen(),
       color3: colorgen(),
       blocks: [
         {
           blockType: Scratch.BlockType.LABEL,
-          text: gen(10)
+          text: gen(TextLength)
         },
         {
           func: 'btn',
           blockType: Scratch.BlockType.BUTTON,
-          text: gen(5)
+          text: gen(TextLength)
         },
         {
           opcode: 'hello',
           blockType: randomBlockType(),
-          text: gen(5)
+          text: gen(TextLength)
         }
       ]
     };
   }
 
   hello() {
-    return gen(5);
+    return gen(TextLength);
   }
   btn() {
-    let e = window.prompt(gen(5));
+    let e = window.prompt(gen(TextLength));
   }
 }
 
