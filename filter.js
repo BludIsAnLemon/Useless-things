@@ -30,7 +30,7 @@
        };
      }
      naughty() {
-       return Scratch.Cast.toString(naughtyWords);
+       return JSON.stringify(naughtyWords);
      }
      add(args) {
        naughtyWords.push(args.t);
