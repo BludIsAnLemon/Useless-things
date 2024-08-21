@@ -34,6 +34,7 @@
      }
      add(args) {
        naughtyWords.push(args.t);
+       naughtyWords = [...new Set(naughtyWords)];
      }
    }
 
