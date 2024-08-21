@@ -22,7 +22,7 @@
              arguments: {
                 t: {
                    type: Scratch.ArgumentType.STRING,
-                   defaultValue: "naughty word"
+                   defaultValue: "This should include a naughty word!"
                 }
              }
            },
