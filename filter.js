@@ -27,7 +27,16 @@
              }
            },
            {
-           }
+             opcode: 'add',
+             blockType: Scratch.BlockType.COMMAND,
+             text: 'add [t] to naughty words',
+             arguments: {
+                t: {
+                   type: Scratch.ArgumentType.STRING,
+                   defaultValue: "naughty word"
+                }
+             }
+            }
          ]
        };
      }
@@ -48,6 +57,7 @@
               break;
            }
         }
+        return found;
      }
    }
 
