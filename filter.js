@@ -2,7 +2,7 @@
   'use strict';
 
   const vm = Scratch.vm
-  let naughtyWords = {}
+  let naughtyWords = []
 
    class WordFiltering {
      getInfo() {
