@@ -36,7 +36,23 @@
                    defaultValue: "naughty word"
                 }
              }
-            }
+            },
+            {
+             opcode: 'clear',
+             blockType: Scratch.BlockType.COMMAND,
+             text: 'clear naughty words'
+            },
+            {
+             opcode: 'remove',
+             blockType: Scratch.BlockType.COMMAND,
+             text: 'remove [t] from naughty words',
+             arguments: {
+                t: {
+                   type: Scratch.ArgumentType.STRING,
+                   defaultValue: "naughty word"
+                }
+             }  
+           },
          ]
        };
      }
@@ -58,6 +74,12 @@
            }
         }
         return found;
+     }
+     clear() {
+        naughtyWords = []
+     }
+     remove(args) {
+        naughtyWords = naughtyWords.filter(element => element !== args.t);
      }
    }
 
