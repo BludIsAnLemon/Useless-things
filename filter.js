@@ -12,7 +12,7 @@
          blocks: [
            {
              opcode: 'naughty',
-             blockType: Scratch.Blocktype.REPORTER,
+             blockType: Scratch.BlockType.REPORTER,
              text: 'naughty words'
            },
            {
