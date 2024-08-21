@@ -9,6 +9,9 @@
        return {
          id: 'WordFilter',
          name: 'Word Filtering',
+         color1: '#FF4F4F',
+         color2: '#ED3D3D',
+         color3: '#C41F1F',
          blocks: [
            {
              opcode: 'naughty',
