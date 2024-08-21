@@ -51,8 +51,8 @@
         let found = false;
         let t = args.t
         for(let i = 0; i < naughtyWords.length; i++) {
-           const val = naughtyWords[i].toLowercase()
-           if (t.toLowercase().includes(val)) {
+           const val = naughtyWords[i].toLowerCase()
+           if (t.toLowerCase().includes(val)) {
               found = true;
               break;
            }
