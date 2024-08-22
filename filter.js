@@ -78,7 +78,7 @@
      includes(args) {
         let found = false;
         let g = args.t
-        let t = g.replace( , '')
+        let t = g.replace(" ", "")
         for(let i = 0; i < naughtyWords.length; i++) {
            const val = naughtyWords[i].toLowerCase()
            if (t.toLowerCase().includes(val)) {
