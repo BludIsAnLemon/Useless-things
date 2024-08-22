@@ -3,6 +3,7 @@
 
   const vm = Scratch.vm
   let naughtyWords = []
+  const ignoredWords = []
 
    class WordFiltering {
      getInfo() {
@@ -13,6 +14,10 @@
          color2: '#ED3D3D',
          color3: '#C41F1F',
          blocks: [
+           {
+             blockType: Scratch.BlockType.LABEL,
+             text: 'Naughty Words Related'
+           },
            {
              opcode: 'naughty',
              blockType: Scratch.BlockType.REPORTER,
@@ -56,6 +61,10 @@
                 }
              }  
            },
+           {
+             blockType: Scratch.BlockType.LABEL,
+             text: 'Ignored Words'
+           }
          ]
        };
      }
@@ -68,7 +77,8 @@
      }
      includes(args) {
         let found = false;
-        let t = args.t
+        let g = args.t
+        let t = g.replace( , '')
         for(let i = 0; i < naughtyWords.length; i++) {
            const val = naughtyWords[i].toLowerCase()
            if (t.toLowerCase().includes(val)) {
