@@ -24,6 +24,8 @@ class ImageTest {
     let img = document.createElement("img");
     img.src = imgLink
     let canvas = document.createElement("canvas");
+    canvas.width = 100;
+    canvas.height = 100;
     let ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     return ctx.toDataURL();
