@@ -4,6 +4,7 @@
   const vm = Scratch.vm
   let naughtyWords = []
   let ignoredWords = []
+  let replacedWords = []
 
    class WordFiltering {
      getInfo() {
@@ -16,7 +17,7 @@
          blocks: [
            {
              blockType: Scratch.BlockType.LABEL,
-             text: 'Naughty Words Related'
+             text: 'Naughty Words'
            },
            {
              opcode: 'naughty',
@@ -96,7 +97,36 @@
                   defaultValue: "word"
                }
             }  
-          }
+          },
+          {
+            blockType: Scratch.BlockType.LABEL,
+            text: 'Replaced Words'
+          },
+          {
+            blockType: Scratch.BlockType.LABEL,
+            text: "These doesn't work yet. sorry :(",
+            hideFromPallete: false
+           },
+          {
+            opcode: 'replaced',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'replaced words'
+          },
+          {
+            opcode: 'addReplaced',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'replace [t] with [r]',
+            arguments: {
+               t: {
+                  type: Scratch.ArgumentType.STRING,
+                  defaultValue: "word"
+               },
+               r: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "naughty"
+             }
+            }
+           }
          ]
        };
      }
@@ -109,10 +139,13 @@
      }
      includes(args) {
         let found = false;
-        let g = args.t
+        let g = args.t;
+        for(let i = 0; i < replacedWords.length; i++) {
+          g = g.replace(replacedWords[i].r, replacedWords[i].name);
+        }
         let t = g.replace(" ", "")
         for(let i = 0; i < ignoredWords; i++) {
-          t = t.replace(ignoredWords[i], "")
+          t = t.replace(ignoredWords[i], "");
         }
         for(let i = 0; i < naughtyWords.length; i++) {
            const val = naughtyWords[i].toLowerCase()
@@ -134,13 +167,21 @@
      }
      addIgnored(args) {
        ignoredWords.push(args.t)
-       naughtyWords = [...new Set(naughtyWords)];
+       ignoredWords = [...new Set(ignoredWords)];
      }
      clearIgnored() {
       ignoredWords = [];
      }
      removeIgnored(args) {
       ignoredWords = ignoredWords.filter(element => element !== args.t);
+     }
+     replaced() {
+      return JSON.stringify(replacedWords);
+     }
+     addReplaced(args) {
+      let r = args.r;
+      let t = args.t;
+      replacedWords.push({r: r, "name": t})
      }
    }
 
