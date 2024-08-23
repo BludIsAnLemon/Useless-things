@@ -3,7 +3,7 @@
 
   const vm = Scratch.vm
   let naughtyWords = []
-  const ignoredWords = []
+  let ignoredWords = []
 
    class WordFiltering {
      getInfo() {
@@ -96,7 +96,7 @@
                   defaultValue: "word"
                }
             }  
-          },
+          }
          ]
        };
      }
@@ -124,7 +124,7 @@
         return found;
      }
      clear() {
-      naughtyWords = []
+      naughtyWords = [];
      }
      remove(args) {
       naughtyWords = naughtyWords.filter(element => element !== args.t);
@@ -136,7 +136,7 @@
       ignoredWords.push(args.t)
      }
      clearIgnored() {
-      ignoredWords = []
+      ignoredWords = [];
      }
      removeIgnored(args) {
       ignoredWords = ignoredWords.filter(element => element !== args.t);
