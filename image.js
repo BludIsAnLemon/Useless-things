@@ -24,7 +24,9 @@ class ImageTest {
     let imgLink = args.img;
     let img = document.createElement("img");
     img.src = imgLink;
-    return "";
+    if (true) {
+       return "";
+    }
     returnBubble.appendChild(img);
   }
 }
