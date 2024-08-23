@@ -11,7 +11,7 @@ class ImageTest {
           arguments: {
              img: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue = "https://extensions.turbowarp.org/dango.png"
+                defaultValue: "https://extensions.turbowarp.org/dango.png"
              }
           }
         }
