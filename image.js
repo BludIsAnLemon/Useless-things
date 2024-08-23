@@ -20,8 +20,8 @@ class ImageTedt {
   }
 
   image(args) {
-    let imgLink = args.img
-    let img = document.createElement(`img`);
+    let imgLink = args.img;
+    let img = document.createElement("img");
     img.src = imgLink;
     return img;
   }
