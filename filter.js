@@ -64,7 +64,39 @@
            {
              blockType: Scratch.BlockType.LABEL,
              text: 'Ignored Words'
-           }
+           },
+           {
+            opcode: 'ignored',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'ignored words'
+          },
+          {
+            opcode: 'addIgnored',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'add [t] to ignored words',
+            arguments: {
+               t: {
+                  type: Scratch.ArgumentType.STRING,
+                  defaultValue: "word"
+               }
+            }
+           },
+           {
+            opcode: 'clearIgnored',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'clear ignored words'
+           },
+           {
+            opcode: 'removeIgnored',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'remove [t] from ignored words',
+            arguments: {
+               t: {
+                  type: Scratch.ArgumentType.STRING,
+                  defaultValue: "word"
+               }
+            }  
+          },
          ]
        };
      }
@@ -79,6 +111,9 @@
         let found = false;
         let g = args.t
         let t = g.replace(" ", "")
+        for(let i = 0; i < ignoredWords; i++) {
+          t = t.replace(ignoredWords[i], "")
+        }
         for(let i = 0; i < naughtyWords.length; i++) {
            const val = naughtyWords[i].toLowerCase()
            if (t.toLowerCase().includes(val)) {
@@ -89,10 +124,22 @@
         return found;
      }
      clear() {
-        naughtyWords = []
+      naughtyWords = []
      }
      remove(args) {
-        naughtyWords = naughtyWords.filter(element => element !== args.t);
+      naughtyWords = naughtyWords.filter(element => element !== args.t);
+     }
+     ignored() {
+      return JSON.stringify(ignoredWords);
+     }
+     addIgnored(args) {
+      ignoredWords.push(args.t)
+     }
+     clearIgnored() {
+      ignoredWords = []
+     }
+     removeIgnored(args) {
+      ignoredWords = ignoredWords.filter(element => element !== args.t);
      }
    }
 
