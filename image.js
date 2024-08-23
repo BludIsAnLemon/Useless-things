@@ -20,14 +20,10 @@ class ImageTest {
   }
 
   image(args) {
-    let returnBubble = document.querySelector('.block-reporter-output');
     let imgLink = args.img;
     let img = document.createElement("img");
-    img.src = imgLink;
-    if (true) {
-       return "";
-    }
-    returnBubble.appendChild(img);
+    img.src = imgLink
+    return JSON.parse(img);
   }
 }
 
