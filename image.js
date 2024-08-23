@@ -23,7 +23,9 @@ class ImageTest {
     let imgLink = args.img;
     let img = document.createElement("img");
     img.src = imgLink
-    return img;
+    let canvas = document.createElement("canvas");
+    canvas.appendChild(img)
+    return canvas.toDataURL();
   }
 }
 
