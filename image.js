@@ -1,4 +1,4 @@
-class ImageTedt {
+class ImageTest {
   getInfo() {
     return {
       id: 'helloworld',
