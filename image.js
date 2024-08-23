@@ -10,7 +10,7 @@ class ImageTest {
           text: 'img [img]',
           arguments: {
              img: {
-                argumentType: Scratch.ArgumentType.STRING,
+                type: Scratch.ArgumentType.STRING,
                 defaultValue = "https://extensions.turbowarp.org/dango.png"
              }
           }
