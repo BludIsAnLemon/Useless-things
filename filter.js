@@ -133,7 +133,8 @@
       return JSON.stringify(ignoredWords);
      }
      addIgnored(args) {
-      ignoredWords.push(args.t)
+       ignoredWords.push(args.t)
+       naughtyWords = [...new Set(naughtyWords)];
      }
      clearIgnored() {
       ignoredWords = [];
