@@ -23,7 +23,7 @@ class ImageTest {
     let imgLink = args.img;
     let img = document.createElement("img");
     img.src = imgLink;
-    return `<img src=${imgLink}>`;
+    return img;
   }
 }
 
