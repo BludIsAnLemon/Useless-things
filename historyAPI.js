@@ -8,19 +8,13 @@ class HistoryAPI {
           opcode: 'supported',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'api supported?'
-             }
-          }
         }
       ]
     };
   }
 
   supported() {
-    if (window.history) {
-      return true;
-    } else {
-      return false;
-    }
+    return !!window.history;
   }
 }
 
