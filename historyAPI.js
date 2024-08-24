@@ -22,7 +22,7 @@ class HistoryAPI {
         {
           opcode: 'go',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'go [times]'
+          text: 'go [times]',
           arguments: {
              times: {
                 type: Scratch.ArgumentType.NUMBER
