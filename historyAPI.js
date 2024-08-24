@@ -83,7 +83,7 @@ class HistoryAPI {
     window.history.pushState(state,"",url);
   }
   state() {
-    return window.history.state;
+    return JSON.stringify(window.history.state);
   }
 }
 
