@@ -7,6 +7,11 @@ class HistoryAPI {
       name: 'Web History API',
       blocks: [
         {
+          opcode: 'history',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'window history'
+        },
+        {
           opcode: 'supported',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'api supported?'
@@ -17,6 +22,9 @@ class HistoryAPI {
 
   supported() {
     return !!window.history;
+  }
+  history() {
+    return JSON.stringify(window.history);
   }
 }
 
