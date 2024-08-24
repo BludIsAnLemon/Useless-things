@@ -16,7 +16,12 @@ class HistoryAPI {
   }
 
   supported() {
-    return window.history ? 'true' : 'false';
+    if (window.history) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
 
