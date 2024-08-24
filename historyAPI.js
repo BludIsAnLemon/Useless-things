@@ -49,7 +49,7 @@ class HistoryAPI {
              },
              url: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: "https://extensions.turbowarp.org/hello.html"
+              defaultValue: "https://turbowarp.org/"
              }
           }
         },
