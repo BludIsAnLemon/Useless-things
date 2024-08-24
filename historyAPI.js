@@ -1,5 +1,3 @@
-// will finish this soon
-
 class HistoryAPI {
   getInfo() {
     return {
@@ -22,6 +20,16 @@ class HistoryAPI {
           text: 'go forward'
         },
         {
+          opcode: 'go',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'go [times]'
+          arguments: {
+             times: {
+                type: Scratch.ArgumentType.NUMBER
+             }
+          }
+        },
+        {
           opcode: 'supported',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'api supported?'
@@ -41,6 +49,9 @@ class HistoryAPI {
   }
   back() {
     window.history.back();
+  }
+  go(args) {
+    window.history.go(args.times);
   }
 }
 
