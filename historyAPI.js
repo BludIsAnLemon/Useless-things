@@ -30,6 +30,25 @@ class HistoryAPI {
           }
         },
         {
+          opcode: 'push',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'push [pageID] [userID] with link [url]',
+          arguments: {
+             pageID: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 1
+             },
+              userID: {
+               type: Scratch.ArgumentType.NUMBER,
+               defaultValue: 5
+             },
+             url: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: "https://extensions.turbowarp.org/hello.html"
+             }
+          }
+        },
+        {
           opcode: 'supported',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'api supported?'
@@ -52,6 +71,11 @@ class HistoryAPI {
   }
   go(args) {
     window.history.go(args.times);
+  }
+  push(args) {
+    const state = { page_id: args.pageID, user_id: args.userID };
+    const url = args.url
+    window.history.pushState(state,"",url);
   }
 }
 
