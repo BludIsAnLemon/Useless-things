@@ -30,6 +30,11 @@ class HistoryAPI {
           }
         },
         {
+          opcode: 'state',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'history state'
+        },
+        {
           opcode: 'push',
           blockType: Scratch.BlockType.COMMAND,
           text: 'push [pageID] [userID] with link [url]',
@@ -76,6 +81,9 @@ class HistoryAPI {
     const state = { page_id: Scratch.Cast.toNumber(args.pageID), user_id: Scratch.Cast.toNumber(args.userID) };
     const url = Scratch.Cast.toString(args.url);
     window.history.pushState(state,"",url);
+  }
+  state() {
+    return window.history.state;
   }
 }
 
