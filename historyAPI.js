@@ -18,8 +18,7 @@ class HistoryAPI {
   supported() {
     if (window.history) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
