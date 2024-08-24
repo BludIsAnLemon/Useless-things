@@ -73,8 +73,8 @@ class HistoryAPI {
     window.history.go(args.times);
   }
   push(args) {
-    const state = { page_id: args.pageID, user_id: args.userID };
-    const url = args.url
+    const state = { page_id: Scratch.Cast.toNumber(args.pageID), user_id: Scratch.Cast.toNumber(args.userID) };
+    const url = Scratch.Cast.toString(args.url);
     window.history.pushState(state,"",url);
   }
 }
