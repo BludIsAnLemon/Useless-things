@@ -16,7 +16,7 @@ class HistoryAPI {
   }
 
   supported() {
-    return window.history ? true : false;
+    return window.history ? 'true' : 'false';
   }
 }
 
