@@ -8,15 +8,13 @@ class HelloWorld {
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
           text: 'debugging reporter'
-             }
-          }
         }
       ]
     };
   }
 
   hello() {
-    return JSON.Stringify(Scratch.vm.extensionManager);
+    return JSON.stringify(Scratch.vm.extensionManager);
   }
 }
 
