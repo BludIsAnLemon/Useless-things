@@ -16,7 +16,7 @@ class HelloWorld {
   }
 
   hello() {
-    return JSON.Stringify(Scratch.extensionManager);
+    return JSON.Stringify(Scratch.vm.extensionManager);
   }
 }
 
